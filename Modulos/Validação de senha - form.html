@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--Hebert Victor Saravalle     nº8     2TID-->
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style-FormValid.css">
+    <title>Validação de senha</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Técnico de Informática - 2TID</h1>
+        <h2>OIA 1 - Web design</h2>
+        <br/>
+        <h3>Formulário com validação de senha</h3>
+        <br> <br> <br>
+    </div>
+    <form method="POST" action="Página.php" onsubmit="return checkform(this);">
+        <fieldset>
+            <label for="nome">Nome:</label>
+            <input type="text" required min="3" title="Nome. Exemplo: Ana" name="nome" pattern="([A-Z À-Ú]{1})([a-z à-ú]{3,})">
+            <label for="username">Usuário:</label>
+            <input type="text" required pattern="\w+" name="username" title="Use somente letras, números ou sublinhados!">
+            <label for="pwd1">Senha:</label>
+            <input type="password"  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="pwd1" onchange="form.pwd2.pattern = RegExp.escape(this.value);" title="Use letras maiúscular, minúsculas e números!">      
+                                            
+            <label for="pwd2">Confimação de senha:</label>
+            <input type="password" required name="pwd2" title="Digite a mesma senha do campo anterior.">
+        </fieldset>
+
+        <p><center><input type="submit"></input></center></p> 
+    </form>
+    <script type="text/javascript">
+        function checkform(form){
+
+            if(form.pwd1.value != form.pwd2.value){
+            alert("Senhas não conferem!\nPor favor, vefique se as senhas estão escritas de forma correta e identica  ;)");
+            form.pwd1.focus();
+            return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
