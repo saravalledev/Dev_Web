@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="Stylesheet" href="../CSS/Style.css">                                  
+    
+    <title>Meu SlideShow para Wallpapers</title>
+</head>
+<body>
+    <h2 class="w3-center">Wallpapes relacionados a "Universo"</h2>
+        
+        <div class="slideshow-conteiner">
+            <div class="MySlides fade">
+                <div class="numbertext">1/10</div>
+                <img class="MySlides" src="../../HTMLs/Meu Slide Auto/imgs/astronaltabom - img1.jpg"> 
+                    <br><br>
+                <div class="text">Astronalta Relaxando</div>
+            </div>
+            <div class="MySlides fade">
+                <div class="numbertext">2/10</div>
+                <img class="MySlides" src="../../HTMLs/Meu Slide Auto/imgs/2planet-img2.jpg"> 
+                    <br><br>
+                <div class="text">Planetas Distintos</div>
+            </div>
+            <div class="MySlides fade">
+                <div class="numbertext">3/10</div>
+                <img class="MySlides" src="../../HTMLs/Meu Slide Auto/imgs/energcosmos-img3.jpg"> 
+                    <br><br>
+                <div class="text">Galáxia</div>
+            </div>
+            <div class="MySlides fade">
+                <div class="numbertext">4/10</div>
+                <img class="MySlides" src="../../HTMLs/Meu Slide Auto/imgs/EnergSolar-img4.jpg"> 
+                    <br>
+                <div class="text">Energia Solar na Terra </div>
+            </div>
+            <div class="MySlides fade">
+                <div class="numbertext">5/10</div>
+                <img class="MySlides" src="../../HTMLs/Meu Slide Auto/imgs/newStar-img5.jpg"> 
+                    <br>
+                <div class="text">Nova Estrela</div>
+            </div>
+            <div class="MySlides fade">
+                <div class="numbertext">6/10</div>
+                <img class="MySlides" src="../../HTMLs/Meu Slide Auto/imgs/planetRoxo-img6.jpg"> 
+                    <br>
+                <div class="text">Lua Roxa</div>
+            </div>
+            <div class="MySlides fade">
+                <div class="numbertext">7/10</div>
+                <img class="MySlides" src="../../HTMLs/Meu Slide Auto/imgs/planets-img7.jpg"> 
+                    <br>
+                <div class="text">Planetas</div>
+            </div>
+            <div class="MySlides fade">
+                <div class="numbertext">8/10</div>
+                <img class="MySlides" src="../../HTMLs/Meu Slide Auto/imgs/StarWars-img8.jpg"> 
+                    <br>
+                <div class="text">Strar Wars</div>
+            </div>
+            <div class="MySlides fade">
+                <div class="numbertext">9/10</div>
+                <img class="MySlides" src="../../HTMLs/Meu Slide Auto/imgs/Terracores-img9.jpg"> 
+                    <br>
+                <div class="text">Fenomeno No Espaço</div>
+            </div>
+            <div class="MySlides fade">
+                <div class="numbertext">10/10</div>
+                <img class="MySlides" src="../../HTMLs/Meu Slide Auto/imgs/fenomenoSpace-img10.jpg"> 
+                    <br>
+                <div class="text">Fenômeno Ampulheta</div>
+            </div>
+        </div>
+    </div>
+    <br>
+        <div style="text-align:center">
+            <button class="dot" onclick="goto(0)"></button>
+            <button class="dot" onclick="goto(1)"></button>
+            <button class="dot" onclick="goto(2)"></button>
+            <button class="dot" onclick="goto(3)"></button>
+            <button class="dot" onclick="goto(4)"></button>
+            <button class="dot" onclick="goto(5)"></button>
+            <button class="dot" onclick="goto(6)"></button>
+            <button class="dot" onclick="goto(7)"></button>
+            <button class="dot" onclick="goto(8)"></button>
+            <button class="dot" onclick="goto(9)"></button>
+        </div>
+        <script>
+            var slideIndex = 0;
+            function goto(indice){
+                slideIndex = indice;
+            }
+            showSlides();
+            function showSlides() {
+                var i; 
+                var slides = document.getElementsByClassName("MySlides fade");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                     slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                for (i = 0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active","");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 3000);
+            }
+
+        </script>
+    </body>
+</html>

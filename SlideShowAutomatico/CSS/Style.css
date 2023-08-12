@@ -1,0 +1,104 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+.header {
+    margin: 0px 5px 10px 10px;
+    /*Top Right Botton and Left*/
+    /*background-image: url("Imagens/alcina-532.gif");*/
+    height: auto;
+}
+.header img{
+    width: 100px;
+    height: 100px;
+    border-style: none;
+}
+
+.header h1, .header h2, .header h3{
+    padding: 0;
+    margin: 0;
+    color: blue;
+    font-family: 'Vast Shadow', cursive;
+    text-align: center;
+    font-style: italic;
+    background-color: hsla(180, 100%, 50%, 0.0);
+}
+h1, h2, h3, h4{
+    font-family: 'anurati';
+    background-color: rgba(0, 0, 139, 0.836);
+    /*Para a cor aqua (cyan)*/
+    /*rgba(0, 255, 255, 1.0)
+    /*hsl(180, 100%, 50%)*/
+}
+
+h1{
+    text-align: center;
+    color: blue;
+    font-size: 200%;  
+}
+h2{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 170%;
+}
+h3{
+    text-align: center;
+    color: indigo;
+    font-size: 150%;
+}
+h4{
+    text-align: center;
+    color: black;
+    font-size: 130%;
+}
+
+p {
+    padding: 15px;
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 120%;
+    color: black;
+}
+ul{
+    color: darkblue;
+    font-family: cursive;
+    font-size: 110%;
+}
+img{
+    display: block;
+    margin:auto;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-color:rgba(0, 0, 139, 0.836);
+    height: 600px;
+    width: auto;
+}
+.icon{
+    display: inline;
+    margin: 0px;
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+    border-style: none;
+}
+.dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 0px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active{
+    background-color: #0e005e;
+}
+.numbertext{
+    color: white;
+
+}
+.text{
+    color: white;
+    text-align: center;
+}
